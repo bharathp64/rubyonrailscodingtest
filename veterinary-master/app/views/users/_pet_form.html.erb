@@ -1,0 +1,18 @@
+<div class="field">
+  <%= f.label :name, "Customer Name" %><br />
+  <%= f.text_field :name %>
+</div>
+
+<div><%= f.label :email %><br />
+<%= f.email_field :email %></div>
+
+<div><%= f.label :password %><br />
+<%= f.password_field :password %></div>
+
+<div><%= f.label :password_confirmation %><br />
+<%= f.password_field :password_confirmation %></div>
+<div>
+	<%= f.fields_for :pet, @pet  do |pet| %>
+		<%= render "pets/pet", :f => pet  %>
+	<% end %>
+</div>
